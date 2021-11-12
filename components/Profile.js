@@ -8,12 +8,8 @@ export default function Profile({route,navigation}) {
   const [tiledata,setTiledata] = useState([]);
   const {refresh} = route.params;
 
-  console.log('profile tile',tiledata);
-  console.log('refresh status',refresh);
-
   useEffect(() => {
     setTiledata(data);
-    console.log('profile runs')
   },[data])
  
     return (
