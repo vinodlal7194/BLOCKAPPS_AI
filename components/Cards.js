@@ -7,18 +7,13 @@ export default function Profile({id,image,title,email,phone,date,likes}) {
   const dispatch = useDispatch();
 
   const like = (id) => {
-    console.log(id,data);
     const like = data[id];
-    console.log(like)
-    let update = {...like,like:like.like + 1}
-    console.log(update);
+    let update = {...like,like:like.like + 1};
     dispatch({type:'UPDATE',payload:update});
   }
   const dislike = (id) => {
-    console.log(id,data);
     const dislike = data[id];
     let update = {...dislike,like:(dislike.like > 0)?dislike.like - 1 : 0}
-    console.log(update);
     dispatch({type:'UPDATE',payload:update});
   }
 
