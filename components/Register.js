@@ -19,7 +19,6 @@ export default function Register({ route,navigation }) {
    async function handleSubmit(){
 
     if(text !== null && number !== null && email !== null && date !== null){
-      console.log('data field full');
 
       const img_fetch = await fetch('https://randomuser.me/api/')
                                 .then(res => res.json())
@@ -57,44 +56,7 @@ export default function Register({ route,navigation }) {
     
    
   }
-  // console.log('dheko',useSelector(state => state.register))
-  // const redux_data = useSelector(state => state.register);
-  // useEffect(() => {
-  //   setData(redux_data);
-  // })
-  // useEffect(() => {
-    
-  //   const getData = async () => {
-  //     try {
-  //       const jsonValue = await AsyncStorage.getItem('@harddata');
-  //       console.log('data received from storage',jsonValue);
-  //       dispatch({type:'CREATE',payload:JSON.parse(jsonValue)});
-  //       return jsonValue != null ? setData(JSON.parse(jsonValue)) : setData([]);
-  //     } catch(e) {
-  //       console.log('error',e)
-  //     }
-  //   }
-  //   getData()
-  //   console.log(getData,'get data')
-   
-  // },[])
-  // console.log('redux data',data);
-
-  // useEffect(() => {
-  //   setData(data_fetch);
-  //   console.log('store data',data);
-  //   const storeData = async (data) => {
-  //     try {
-  //       if(data !== null && data.length > 0 ){
-  //         const jsonValue = JSON.stringify(data)
-  //         await AsyncStorage.setItem('@harddata', jsonValue)
-  //       }
-  //     } catch (e) {
-  //        console.log('error',e)
-  //     }
-  //   }
-  //   storeData(data_fetch);
-  // },[])
+ 
 
     return (
       <SafeAreaView style={styles.main}>
